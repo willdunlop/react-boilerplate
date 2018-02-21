@@ -1,0 +1,40 @@
+.scroll-up {
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  background: #020;
+  color: #0f0;
+  border: 1px solid #0f0; }
+
+con {
+  display: block; }
+
+.scroll-up div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  text-align: left;
+  /* Starting position */
+  -moz-transform: translateY(10%);
+  -webkit-transform: translateY(10%);
+  transform: translateY(10%);
+  /* Apply animation to this element */
+  -moz-animation: scroll-up .75s infinite;
+  -webkit-animation: scroll-up .75s infinite;
+  animation: scroll-up .75s infinite;
+  animation-timing-function: linear; }
+
+@keyframes scroll-up {
+  0% {
+    -moz-transform: translateY(10%);
+    /* Browser bug fix */
+    -webkit-transform: translateY(10%);
+    /* Browser bug fix */
+    transform: translateY(10%); }
+  100% {
+    -moz-transform: translateY(-300%);
+    /* Browser bug fix */
+    -webkit-transform: translateY(-300%);
+    /* Browser bug fix */
+    transform: translateY(-300%); } }

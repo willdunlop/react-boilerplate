@@ -1,0 +1,23 @@
+{
+  "name": "base-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "^1.1.1"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "0.0.3"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/style/scss -o src/style/css",
+    "watch-css": "npm run build-css && node-sass-chokidar src/style/scss -o src/style/css --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "eject": "react-scripts eject"
+  }
+}

@@ -1,0 +1,18 @@
+html {
+  @include responsive-type(font-size, 320px, 1366px, 14px, 18px);
+  color: $white;
+  font-family: 'Ubuntu', sans-serif;
+  height: 100%;
+  line-height: 1.375;
+}
+
+body {
+  background: $mineshaft;
+  min-height: 100%;
+  overflow-y: scroll;
+
+  &[data-modal-visible="true"] {
+    overflow-y: hidden;
+
+  }
+}
