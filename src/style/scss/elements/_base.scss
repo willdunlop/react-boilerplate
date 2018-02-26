@@ -1,6 +1,6 @@
 html {
   @include responsive-type(font-size, 320px, 1366px, 14px, 18px);
-  color: $white;
+  color: $mineshaft;
   font-family: 'Ubuntu', sans-serif;
   height: 100%;
   line-height: 1.375;
@@ -15,11 +15,4 @@ body {
     overflow-y: hidden;
 
   }
-}
-
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
 }

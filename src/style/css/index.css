@@ -264,7 +264,7 @@ video {
   src: url("https://fonts.googleapis.com/css?family=Ubuntu"); }
 
 html {
-  color: #ffffff;
+  color: #333333;
   font-family: 'Ubuntu', sans-serif;
   height: 100%;
   line-height: 1.375; }
@@ -282,12 +282,6 @@ body {
   overflow-y: scroll; }
   body[data-modal-visible="true"] {
     overflow-y: hidden; }
-
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1; }
 
 .body-wrap {
   min-height: 100vh; }
@@ -313,6 +307,14 @@ canvas {
 
 .app__secondary-heading {
   font-size: 1.5em; }
+
+.scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; }
 
 .container::after,
 .u-clearfix::after {
