@@ -9,6 +9,7 @@ export default class Scene extends Component {
     }
 
     componentDidMount() {
+        //  Set the width and height to match the size of the rendered div
         const width = this.mount.clientWidth;
         const height = this.mount.clientHeight;
 
@@ -23,24 +24,33 @@ export default class Scene extends Component {
 
         var directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
 
-        //  Adjust the camera position
+        //  Adjust the camera position to distance it from the origin/cube
         camera.position.z = 5;
 
+        //set the size of the renderer to match the div
         renderer.setSize(width, height);
+        //  add the assets to the scene (except the camera, it's external to the scene)
         scene.add(cube);
         scene.add(directionalLight);
 
+        //  add the assets to the scope of 'this'
         this.scene = scene;
         this.camera = camera;
         this.renderer = renderer;
         this.material = material;
         this.cube = cube;
-    
+        
+        //  add the renderer to the div element
         this.mount.appendChild(this.renderer.domElement);
 
+        //  call the animate function
         this.animate();
     }
 
+    /**	
+     * @function animate	
+     * Controls the re-rendering of each frame when there is a defined change in the scene	
+     */
     animate() {
         //  Informs the browser that an animation is about to occur in the animate (this) function.
         window.requestAnimationFrame(this.animate);
