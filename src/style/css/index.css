@@ -278,11 +278,16 @@ html {
         font-size: 18px; } }
 
 body {
-  background: #333333;
   min-height: 100%;
   overflow-y: scroll; }
   body[data-modal-visible="true"] {
     overflow-y: hidden; }
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; }
 
 .body-wrap {
   min-height: 100vh; }
@@ -301,8 +306,7 @@ body {
   text-align: center;
   margin: 1em auto;
   padding: 1em 2em;
-  background: #ffffff;
-  color: #333333; }
+  color: #ffffff; }
 
 .app__main-heading {
   font-size: 2.5em; }
